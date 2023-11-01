@@ -14,7 +14,7 @@ inputs:
 
 runs:
   using: "composite"
-  setps:
+  steps:
     - name: 'Printing the first input'
       shell: bash
       run: echo "The first input is - ${{ inputs.input-1 }}"
