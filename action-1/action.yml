@@ -1,0 +1,20 @@
+name: 'action 1'
+
+description: 'first reusable action'
+
+inputs: 
+  input-1:
+    description: 'The firt input of the reusable action'
+    required: true
+    default: 'first-input'
+  
+  input-2:
+    description: 'The second input of the reusable action'
+    required: false
+
+runs:
+  using: "composite"
+  setps:
+    - name: 'Printing the first input'
+      shell: bash
+      run: echo "The first input is - ${{ inputs.input-1 }}"
